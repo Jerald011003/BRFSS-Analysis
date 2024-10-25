@@ -3,7 +3,7 @@
 ## Dataset Description
 This project analyzes the **Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System (BRFSS)** dataset. This dataset provides information on behavioral risk factors that impact public health, such as physical activity levels, nutrition, and obesity trends across different demographics in the United States.
 
-The dataset can be accessed from the following URL: [BRFSS Dataset](https://raw.githubusercontent.com/Jerald011003/Nutrition-Physical_Activity-and-Obesity-Analysis/refs/heads/main/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv).
+The dataset can be accessed from the following URL: [Dataset](https://raw.githubusercontent.com/Jerald011003/Nutrition-Physical_Activity-and-Obesity-Analysis/refs/heads/main/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv).
 
 ## Summary of Findings
 1. **Physical Activity and Obesity**: Trends indicate that lower physical activity is associated with higher obesity rates.
@@ -46,4 +46,4 @@ Each model was evaluated individually using the following metrics:
 This project provides a comprehensive analysis of the BRFSS dataset, identifying key behavioral risk factors associated with obesity. The developed models offer insights into public health risks, which can guide preventive measures and policy decisions.
 
 ## Contributors
-- **Your Name**: Data analysis, model development, and documentation.
+- **Jerald Francis Bagsic**: Data analysis, model development, and documentation.
