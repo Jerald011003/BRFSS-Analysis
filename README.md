@@ -5,6 +5,41 @@ This project analyzes the **Nutrition, Physical Activity, and Obesity - Behavior
 
 The dataset can be accessed from the following URL: [Dataset](https://raw.githubusercontent.com/Jerald011003/Nutrition-Physical_Activity-and-Obesity-Analysis/refs/heads/main/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv).
 
+### Data Columns and Descriptions
+- **YearStart**: Starting year of data collection for a particular record.
+- **YearEnd**: Ending year of data collection for the record (usually the same as `YearStart`).
+- **LocationAbbr**: Abbreviation of the location (e.g., state or region).
+- **LocationDesc**: Full description of the location.
+- **Datasource**: The data source or system from which the data is collected.
+- **Class**: High-level category of the topic (e.g., "Nutrition", "Physical Activity").
+- **Topic**: Specific topic within the class (e.g., "Fruit Consumption", "Exercise Frequency").
+- **Question**: Survey question asked to gather the data.
+- **Data_Value_Unit**: Unit of measurement for the data value (e.g., percentage).
+- **Data_Value_Type**: Type of data value (e.g., "Mean", "Percentage").
+- **Data_Value**: Collected data value based on the question.
+- **Data_Value_Alt**: Alternate form of the data value, if applicable.
+- **Data_Value_Footnote_Symbol**: Symbol indicating a footnote related to the data value.
+- **Data_Value_Footnote**: Footnote text providing additional context or clarification about the data value.
+- **Low_Confidence_Limit**: Lower bound of the confidence interval for the data value.
+- **High_Confidence_Limit**: Upper bound of the confidence interval for the data value.
+- **Sample_Size**: Number of survey respondents used to calculate the data value.
+- **Total**: Aggregate total for the specific category or group.
+- **Age(years)**: Age group of respondents, measured in years.
+- **Education**: Education level of respondents.
+- **Gender**: Gender of respondents.
+- **Income**: Income level of respondents.
+- **Race/Ethnicity**: Race or ethnicity of respondents.
+- **GeoLocation**: Geographic coordinates (latitude and longitude) of the location.
+- **ClassID**: Unique identifier for the class category.
+- **TopicID**: Unique identifier for the topic.
+- **QuestionID**: Unique identifier for the question.
+- **DataValueTypeID**: Unique identifier for the data value type.
+- **LocationID**: Unique identifier for the location.
+- **StratificationCategory1**: Category used for stratification (e.g., age, gender).
+- **Stratification1**: Specific stratification within the category (e.g., "Male" or "Female").
+- **StratificationCategoryId1**: Unique identifier for the stratification category.
+- **StratificationID1**: Unique identifier for the specific stratification.
+
 ## Summary of Findings
 1. **Physical Activity and Obesity**: Trends indicate that lower physical activity is associated with higher obesity rates.
 2. **Diet and Obesity**: Individuals with poor dietary habits showed a higher prevalence of obesity.
