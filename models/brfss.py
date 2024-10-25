@@ -32,7 +32,7 @@ warnings.filterwarnings('ignore')
 
 sns.set_theme(style='whitegrid', font='serif')
 
-DATASETURL = 'https://raw.githubusercontent.com/Jerald011003/Nutrition-Physical_Activity-and-Obesity-Analysis/refs/heads/main/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv'
+DATASETURL = 'https://raw.githubusercontent.com/Jerald011003/BRFSS-Analysis/refs/heads/main/datasets/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv'
 
 """# I. Exploratory Data **Analysis**"""
 
