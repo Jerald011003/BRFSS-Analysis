@@ -135,6 +135,3 @@ Further analysis may be warranted to ensure this accuracy is valid and generaliz
 This project provides a comprehensive analysis of the BRFSS dataset, identifying key behavioral risk factors associated with obesity. The developed models offer insights into public health risks, which can guide preventive measures and policy decisions.
 
 ## Contributors
-- **Jerald Francis Bagsic**: Data analysis, model development & evaluation, and documentation.
-- **Justin Angelo Pingol**: Visualization and documentation.
-- **Barlo Ordiales**: Data Cleaning and documentation.
