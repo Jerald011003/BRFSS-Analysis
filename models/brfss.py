@@ -118,67 +118,78 @@ print(data_cleaned.isnull().sum())
 
 """# **III. Data Visualization**"""
 
-# Numerical Categories Visualization
-# def distribution_of_data(data_cleaned, column):
-#     fig, ax = plt.subplots(figsize=(12, 6))
-
-#     # Filter out 'Unknown' values before plotting
-#     filtered_data = data_cleaned[data_cleaned[column] != 'Unknown']
-
-#     sns.histplot(filtered_data[column], kde=True, ax=ax)
-
-#     # !!! THE UNKNOWNS ARE EXCLUDED TO UNDERSTAND TRENDS/RELATIONSHIP MORE CLEARER
-#     ax.set_title(f'Distribution of {column}')
-#     ax.set_xlabel(column)
-#     ax.set_ylabel('Frequency')
-
-#     plt.show()
-
-#     # !!! EXCLUDING THESE COLUMNS IT SHOWS FOR MORE CLEARER DISTRIBUTIONS
-# exclude_cols = ['Datasource', 'Data_Value_Type', 'Data_Value_Footnote_Symbol',
-#                  'Data_Value_Footnote', 'Total']
-
-# # Loop through the categorical columns and plot distributions, excluding the specified columns
-# for col in cat_cols:
-#     if col not in exclude_cols:
-#         distribution_of_data(data_cleaned, col)
-
-# Numerical Categories Visualization
+# Categorical Categories Visualization
 def distribution_of_data(data_cleaned, column):
     fig, ax = plt.subplots(figsize=(12, 6))
 
-    # Plot the distribution of the data with dynamic bins
-    sns.histplot(data_cleaned[column], kde=True, ax=ax)
+    filtered_data = data_cleaned[data_cleaned[column] != 'Unknown']
+    sns.histplot(filtered_data[column], kde=True, ax=ax)
 
-    # Set the title and labels
     ax.set_title(f'Distribution of {column}')
     ax.set_xlabel(column)
     ax.set_ylabel('Frequency')
 
-    # Show the plot
+    ax.tick_params(axis='x', rotation=45)
+
     plt.show()
 
-for col in num_cols:
-    distribution_of_data(data_cleaned, col)
+exclude_cols = ['Datasource', 'Data_Value_Type', 'Data_Value_Footnote_Symbol',
+                 'Data_Value_Footnote', 'Total', 'LocationAbbr', 'LocationDesc',
+                 'GeoLocation', 'StratificationCategory1', 'Stratification1', 'Question']
+
+for col in cat_cols:
+    if col not in exclude_cols:
+        distribution_of_data(data_cleaned, col)
 
 def count_plot(data_cleaned, column):
+    filtered_data = data_cleaned[data_cleaned[column] != 'Unknown']
+
     plt.figure(figsize=(12, 6))
-    sns.countplot(data=data_cleaned, x=column, order=data_cleaned[column].value_counts().index)
+    sns.countplot(data=filtered_data, x=column, order=filtered_data[column].value_counts().index)
     plt.title(f'Count Plot of {column}')
     plt.xlabel(column)
     plt.ylabel('Count')
     plt.xticks(rotation=45)
     plt.show()
 
-for col in cat_cols:
-    count_plot(data_cleaned, col)
+exclude_cols = ['Datasource', 'Data_Value_Type', 'Data_Value_Footnote_Symbol',
+                'Data_Value_Footnote', 'Total', 'LocationAbbr', 'LocationDesc',
+                'GeoLocation', 'StratificationCategory1', 'Stratification1', 'Question']
 
-# Box plot for Data_Value
-plt.figure(figsize=(10, 6))
-sns.boxplot(x=data_cleaned['Data_Value'])
-plt.title('Box Plot of Data_Value')
-plt.xlabel('Data_Value')
-plt.show()
+for col in cat_cols:
+    if col not in exclude_cols:
+        count_plot(data_cleaned, col)
+
+def box_plot(data_cleaned, column):
+    filtered_data = data_cleaned[data_cleaned[column] != 'Unknown']
+
+    plt.figure(figsize=(12, 6))
+    sns.boxplot(data=filtered_data, x=column)
+    plt.title(f'Box Plot of {column}')
+    plt.xlabel(column)
+    plt.ylabel('Values')
+    plt.xticks(rotation=45)
+    plt.show()
+
+exclude_cols = ['Datasource', 'Data_Value_Type', 'Data_Value_Footnote_Symbol',
+                'Data_Value_Footnote', 'Total', 'LocationAbbr', 'LocationDesc',
+                'GeoLocation', 'StratificationCategory1', 'Stratification1', 'Question', 'Gender']
+
+for col in cat_cols:
+    if col not in exclude_cols:
+        box_plot(data_cleaned, col)
+
+def scatter_plot(data_cleaned, x_col, y_col, hue_col):
+    plt.figure(figsize=(12, 6))
+    sns.scatterplot(data=data_cleaned, x=x_col, y=y_col, hue=hue_col, palette='viridis')
+    plt.title(f'Scatter Plot of {y_col} vs {x_col}')
+    plt.xlabel(x_col)
+    plt.ylabel(y_col)
+    plt.grid(True, linestyle='--', alpha=0.5)
+    plt.legend(title=hue_col)
+    plt.show()
+
+scatter_plot(data_cleaned, 'Sample_Size', 'Data_Value', 'Class')
 
 numerical_data = data_cleaned[num_cols]
 corr = numerical_data.corr()
