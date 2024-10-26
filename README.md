@@ -3,7 +3,7 @@
 ## Dataset Description
 This dataset, from the Behavioral Risk Factor Surveillance System (BRFSS), focuses on tracking trends in nutrition, physical activity, and obesity across various demographic groups in the U.S. It includes data from multiple years, locations, and population segments with variables like age, education, gender, income, and race/ethnicity.
 
-The dataset can be accessed from the following URL: [Dataset](https://raw.githubusercontent.com/Jerald011003/BRFSS-Analysis/refs/heads/main/datasets/Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv).
+The dataset can be accessed from the following URL: [Dataset](https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system?fbclid=IwZXh0bgNhZW0CMTAAAR06sf4V3a6QvGmiEEsI5gODocjC0y01v1GMCCDnOiF5NOWXjRJCk3KtlvA_aem_AejP2I3PCDm4L1rdrQ-fxQ).
 
 ### Data Columns and Descriptions
 - **YearStart**: Starting year of data collection for a particular record.
@@ -135,6 +135,4 @@ Further analysis may be warranted to ensure this accuracy is valid and generaliz
 This project provides a comprehensive analysis of the BRFSS dataset, identifying key behavioral risk factors associated with obesity. The developed models offer insights into public health risks, which can guide preventive measures and policy decisions.
 
 ## Contributors
-- **Jerald Francis Bagsic**: Data analysis, model development & evaluation, and documentation.
-- **Justin Angelo Pingol**: Visualization and documentation.
-- **Barlo Ordiales**: Data Cleaning and documentation.
+
